@@ -1,0 +1,5 @@
+.vs
+
+x64
+Egg/x64
+Game_IC/x64
