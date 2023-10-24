@@ -1,7 +1,9 @@
 .vs
+.vs/Game_IC
 
 
 x64
+x64/Debug
 Egg/x64
 Game_IC/x64
 glfw_proj
