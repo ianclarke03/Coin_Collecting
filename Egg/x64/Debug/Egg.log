@@ -1,1 +1,5 @@
-﻿  Egg.vcxproj -> C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.dll
+﻿  GameWindow.cpp
+C:\Users\Ian\source\repos\Game_IC\Egg\GameWindow.h(21,41): warning C4251: 'egg::GameWindow::mImplementation': class 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>' needs to have dll-interface to be used by clients of class 'egg::GameWindow'
+C:\Users\Ian\source\repos\Game_IC\Egg\GameWindow.h(21,8): message : see declaration of 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>'
+     Creating library C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.lib and object C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.exp
+  Egg.vcxproj -> C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.dll

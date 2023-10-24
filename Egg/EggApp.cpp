@@ -22,12 +22,17 @@ namespace egg
 	}
 
 	template<typename T>
-	void EggApp<T>::Run() // void EggApp::Run()
+	void EggApp<T>::Run()
 	{
+
+		mWindow.Create("Game_IC", 1000, 800);
 
 		while (mShouldContinue)
 		{
 			OnUpdate();
+
+			mWindow.SwapBuffers();
+			mWindow.PollEvents();
 		}
 	}
 

@@ -1,11 +1,12 @@
 #pragma once
 
 #include "Utilities.h"
+#include"GameWindow.h"
 
 namespace egg
 {
 	template<typename T>
-	class EGG_API EggApp
+	class EggApp
 	{
 	public:
 		static void Init();
@@ -20,6 +21,8 @@ namespace egg
 		EggApp();
 
 		inline static EggApp* sInstance{ nullptr };
+
+		GameWindow mWindow;
 
 		bool mShouldContinue{ true };
 

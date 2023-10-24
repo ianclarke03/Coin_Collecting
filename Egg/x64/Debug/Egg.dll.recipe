@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>C:\Users\Ian\source\repos\Game_IC\x64\Debug\glfw3.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
