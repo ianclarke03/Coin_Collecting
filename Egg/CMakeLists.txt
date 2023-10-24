@@ -15,7 +15,7 @@ set(SOURCE_FILES
 add_definitions(-DEGG_DEBUG=2)
 add_definitions(-DEGG_LIB)
 
-include_directories(${PROJECT_SOURCE_DIR})
+include_directories(../Egg)
 include_directories(../glfw/include)
 
 add_library(Egg SHARED ${HEADER_FILES} ${SOURCE_FILES})
