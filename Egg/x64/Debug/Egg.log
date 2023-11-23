@@ -1,5 +1,17 @@
-﻿  GameWindow.cpp
-C:\Users\Ian\source\repos\Game_IC\Egg\GameWindow.h(21,41): warning C4251: 'egg::GameWindow::mImplementation': class 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>' needs to have dll-interface to be used by clients of class 'egg::GameWindow'
-C:\Users\Ian\source\repos\Game_IC\Egg\GameWindow.h(21,8): message : see declaration of 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>'
-     Creating library C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.lib and object C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.exp
-  Egg.vcxproj -> C:\Users\Ian\source\repos\Game_IC\x64\Debug\Egg.dll
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2128,5): warning : The referenced project '..\glfw_proj\src\glfw.vcxproj' does not exist.
+  pch.cpp
+  GameWindow.cpp
+C:\Users\Ian\source\repos\Ian_Clarke_F23\Egg\GameWindow.h(21,41): warning C4251: 'egg::GameWindow::mImplementation': class 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>' needs to have dll-interface to be used by clients of class 'egg::GameWindow'
+C:\Users\Ian\source\repos\Ian_Clarke_F23\Egg\GameWindow.h(21,8): message : see declaration of 'std::unique_ptr<egg::WindowImplementation,std::default_delete<egg::WindowImplementation>>'
+  GLFWImplementation.cpp
+  placeholder.cpp
+  Generating Code...
+  LINK : C:\Users\Ian\source\repos\Ian_Clarke_F23\x64\Debug\Egg.dll not found or not built by the last incremental link; performing full link
+     Creating library C:\Users\Ian\source\repos\Ian_Clarke_F23\x64\Debug\Egg.lib and object C:\Users\Ian\source\repos\Ian_Clarke_F23\x64\Debug\Egg.exp
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwInit referenced in function "public: __cdecl egg::GLFWImplementation::GLFWImplementation(void)" (??0GLFWImplementation@egg@@QEAA@XZ)
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function "public: __cdecl egg::GLFWImplementation::GLFWImplementation(void)" (??0GLFWImplementation@egg@@QEAA@XZ)
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function "public: virtual void __cdecl egg::GLFWImplementation::Create(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int,int)" (?Create@GLFWImplementation@egg@@UEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z)
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwGetWindowSize referenced in function "public: virtual int __cdecl egg::GLFWImplementation::GetHeight(void)const " (?GetHeight@GLFWImplementation@egg@@UEBAHXZ)
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function "public: virtual void __cdecl egg::GLFWImplementation::PollEvents(void)" (?PollEvents@GLFWImplementation@egg@@UEAAXXZ)
+GLFWImplementation.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function "public: virtual void __cdecl egg::GLFWImplementation::SwapBuffers(void)" (?SwapBuffers@GLFWImplementation@egg@@UEAAXXZ)
+C:\Users\Ian\source\repos\Ian_Clarke_F23\x64\Debug\Egg.dll : fatal error LNK1120: 6 unresolved externals
