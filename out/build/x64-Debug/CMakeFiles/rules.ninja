@@ -83,7 +83,11 @@ rule CXX_EXECUTABLE_LINKER__Game_IC_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
+<<<<<<< HEAD
   command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ian\source\repos\Game_IC_original -BC:\Users\Ian\source\repos\Game_IC_original\out\build\x64-Debug
+=======
+  command = "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Ian\source\repos\Ian_Clarke_F23_original -BC:\Users\Ian\source\repos\Ian_Clarke_F23_original\out\build\x64-Debug
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
   description = Re-running CMake...
   generator = 1
 

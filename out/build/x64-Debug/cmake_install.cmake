@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: C:/Users/Ian/source/repos/Game_IC_original
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Game_IC_original/out/install/x64-Debug")
+=======
+# Install script for directory: C:/Users/Ian/source/repos/Ian_Clarke_F23_original
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/install/x64-Debug")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +42,29 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< HEAD
   include("C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/glfw/cmake_install.cmake")
+=======
+  include("C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/glfw/cmake_install.cmake")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< HEAD
   include("C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/Egg/cmake_install.cmake")
+=======
+  include("C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/Egg/cmake_install.cmake")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< HEAD
   include("C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/Game_IC/cmake_install.cmake")
+=======
+  include("C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/Game_IC/cmake_install.cmake")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +75,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

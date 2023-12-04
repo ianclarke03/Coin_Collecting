@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 if (NOT EXISTS "C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/glfw/install_manifest.txt")
     message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/glfw/install_manifest.txt\"")
 endif()
 
 file(READ "C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/glfw/install_manifest.txt" files)
+=======
+if (NOT EXISTS "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/glfw/install_manifest.txt\"")
+endif()
+
+file(READ "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/glfw/install_manifest.txt" files)
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

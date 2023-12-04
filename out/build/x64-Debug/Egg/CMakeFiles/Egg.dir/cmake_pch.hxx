@@ -2,5 +2,9 @@
 
 #pragma system_header
 #ifdef __cplusplus
+<<<<<<< HEAD
 #include "C:/Users/Ian/source/repos/Game_IC_original/Egg/pch.h"
+=======
+#include "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/Egg/pch.h"
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 #endif // __cplusplus

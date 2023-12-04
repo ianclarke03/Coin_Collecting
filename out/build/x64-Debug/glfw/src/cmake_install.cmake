@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: C:/Users/Ian/source/repos/Game_IC_original/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Game_IC_original/out/install/x64-Debug")
+=======
+# Install script for directory: C:/Users/Ian/source/repos/Ian_Clarke_F23_original/glfw/src
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/install/x64-Debug")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +41,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ian/source/repos/Game_IC_original/out/build/x64-Debug/glfw/src/glfw3.lib")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/build/x64-Debug/glfw/src/glfw3.lib")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 

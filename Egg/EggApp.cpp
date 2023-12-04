@@ -37,7 +37,7 @@ namespace egg
 	}
 
 	template<typename T>
-	void EggApp<T>::OnUpdate()
+	void EggApp<T>::OnUpdate() //called in main.cpp
 	{
 	}
 

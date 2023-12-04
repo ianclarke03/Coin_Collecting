@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: C:/Users/Ian/source/repos/Game_IC_original/Egg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Game_IC_original/out/install/x64-Debug")
+=======
+# Install script for directory: C:/Users/Ian/source/repos/Ian_Clarke_F23_original/Egg
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Ian/source/repos/Ian_Clarke_F23_original/out/install/x64-Debug")
+>>>>>>> 6d41f8049b0a73e2aed638fc55d9145228fb1cc9
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
