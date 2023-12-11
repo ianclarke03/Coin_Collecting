@@ -1,0 +1,4 @@
+C:/Users/Ian/source/repos/Game_IC/glfw_proj/CMakeFiles/ALL_BUILD.dir
+C:/Users/Ian/source/repos/Game_IC/glfw_proj/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Ian/source/repos/Game_IC/glfw_proj/src/CMakeFiles/glfw.dir
+C:/Users/Ian/source/repos/Game_IC/glfw_proj/src/CMakeFiles/update_mappings.dir
