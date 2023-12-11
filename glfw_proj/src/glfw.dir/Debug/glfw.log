@@ -1,6 +1,26 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2146,5): warning : The referenced project 'C:\Users\Ian\source\repos\Game_IC\glfw_proj\ZERO_CHECK.vcxproj' does not exist.
-  Building Custom Rule C:/Users/Ian/source/repos/Game_IC/glfw/src/CMakeLists.txt
-  CMake is re-running because C:/Users/Ian/source/repos/Game_IC/glfw_proj/src/CMakeFiles/generate.stamp dependency file is missing.
-CUSTOMBUILD : CMake error : The source directory "C:/Users/Ian/source/repos/Game_IC/glfw" does not exist.
-  Specify --help for usage, or press the help button on the CMake GUI.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): error MSB8066: Custom build for 'C:\Users\Ian\source\repos\Game_IC\glfw\src\CMakeLists.txt' exited with code 1.
+﻿  context.c
+  egl_context.c
+  init.c
+  input.c
+  monitor.c
+  null_init.c
+  null_joystick.c
+  null_monitor.c
+  null_window.c
+  osmesa_context.c
+  platform.c
+  vulkan.c
+  wgl_context.c
+  win32_init.c
+  win32_joystick.c
+  win32_module.c
+  win32_monitor.c
+  win32_thread.c
+  win32_time.c
+  win32_window.c
+  Generating Code...
+  Compiling...
+  window.c
+  Generating Code...
+     Creating library C:/Users/Ian/source/repos/Game_IC/glfw_proj/src/Debug/glfw3dll.lib and object C:/Users/Ian/source/repos/Game_IC/glfw_proj/src/Debug/glfw3dll.exp
+  glfw.vcxproj -> C:\Users\Ian\source\repos\Game_IC\x64\Debug\glfw3.dll
