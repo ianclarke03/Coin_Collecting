@@ -72,7 +72,7 @@ namespace egg
 		glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 
-		//glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2*sizeof(float))); //dk if this coreect
+		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2*sizeof(float))); //dk if this coreect
 		glEnableVertexAttribArray(1);
 
 
@@ -112,7 +112,10 @@ namespace egg
 
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		/////////// NEW ADDITIONS MIGHT BE UNFINISHED ////////
+		/////////// NEW ADDITIONS MIGHT BE UNFINISHED /////////
+
+
+
 		while (mShouldContinue)
 		{
 			OnUpdate();
