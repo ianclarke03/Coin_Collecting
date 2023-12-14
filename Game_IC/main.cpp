@@ -7,7 +7,7 @@ class MyGame : public egg::EggApp<MyGame>
 public:
 	virtual void OnUpdate() override
 	{
-		std::cout << "Egg running" << std::endl; //test
+		//std::cout << "Egg running" << std::endl;
 	}
 };
 

@@ -14,6 +14,9 @@ namespace egg
 	template<typename T>
 	EggApp<T>::EggApp()
 	{
+		mWindow.Create("Game_IC", 1000, 800);
+
+		mRenderer.Init();
 	}
 
 	template<typename T>
@@ -35,7 +38,6 @@ namespace egg
 
 		mWindow.Create("Game_IC", 1000, 800);
 
-		/////////// NEW ADDITIONS  ***UNFINISHED***/////////////
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
 			EGG_ERROR("Failed to initialize GLAD");
@@ -43,10 +45,10 @@ namespace egg
 		}
 
 		float vertices[] = {
-			-0.5f, -0.5f, 0.0f, 0.0f,
-			 0.5f, -0.5f, 1.0f, 0.0f,
-			-0.5f,  0.5f, 0.0f, 1.0f,
-			 0.5f,  0.5f, 1.0f, 1.0f
+			100.f, 100.f, 0.0f, 0.0f,
+			 300.f, 100.f, 1.0f, 0.0f,
+			100.f,  300.f, 0.0f, 1.0f,
+			 300.f,  300.f, 1.0f, 1.0f
 		};
 
 		unsigned int indices[] = {
@@ -84,7 +86,7 @@ namespace egg
 			
 			
 		////////////// TEXTURES //////////////
-
+		egg::Picture pic{ "............." };
 
 		unsigned int texture;
 		glGenTextures(1, &texture);
@@ -93,14 +95,11 @@ namespace egg
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-		//might be some code missing here
 		int width, height, nrChannels;
 		stbi_set_flip_vertically_on_load(true);
-		//modified
 		unsigned char* data = stbi_load("../Assets/Pictures/test.png", &width, &height, &nrChannels, 0);
 		if (data)
 		{
-			//modified
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 			glGenerateMipmap(GL_TEXTURE_2D);
 		}
@@ -112,7 +111,6 @@ namespace egg
 
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		/////////// NEW ADDITIONS MIGHT BE UNFINISHED /////////
 
 
 
@@ -124,6 +122,7 @@ namespace egg
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			shader.Bind();
+			pic.Bind();
 
 			glBindVertexArray(VAO);
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -135,10 +134,40 @@ namespace egg
 
 	}
 
+
+	/*
+	template<typename T>
+	void EggApp<T>::Run()
+	{
+		egg::Shader shader{ "../Assets/Shaders/DefaultVertexShader.glsl", "../Assets/Shaders/DefaultFragmentShader.glsl" };
+
+		while (mShouldContinue)
+		{
+			mRenderer.clear();
+
+			shader.Bind();
+			shader.SetUniform2Ints("ScreenSize", mWindow.GetWidth(), mWindow.GetHeight());
+
+			OnUpdate();
+
+			mWindow.SwapBuffers();
+			mWindow.PollEvents();
+		}
+	}
+	*/
+
 	template<typename T>
 	void EggApp<T>::OnUpdate() //called in main.cpp
 	{
 	}
+
+	/*
+	template<typename T>
+	void EggApp<T>::Draw(int x, int y, Picture& pic)
+	{
+		mRenderer.Draw(100, 200, pic);
+	}
+	*/
 
 
 

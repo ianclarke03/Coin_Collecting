@@ -1,7 +1,7 @@
 #version 330 core
 
 in vec2 TexCoord;
-uniform sampler 2D picture;
+uniform sampler2D picture;
 
 out vec4 FragColor;
 

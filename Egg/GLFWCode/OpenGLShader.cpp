@@ -11,6 +11,13 @@ namespace egg
 {
 	OpenGLShader::OpenGLShader(const std::string& vertexSF, const std::string& fragmentSF)
 	{
+		//temporary...delete later
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		{
+			EGG_ERROR("Failed to initialize GLAD");
+			return;
+		}
+
 		std::string vertexString{ ReadWholeFile(vertexSF) };
 		const char* vertexShaderSource = vertexString.c_str();
 		std::string fragmentString{ ReadWholeFile(fragmentSF) };
@@ -147,6 +154,8 @@ namespace egg
 		while (inputFile)
 		{
 			std::getline(inputFile, nextLine);
+			if (!inputFile)
+				break;
 			result += nextLine;
 			result += "\n";
 		}
@@ -164,6 +173,8 @@ namespace egg
 		while (inputFile)
 		{
 			std::getline(inputFile, nextLine);
+			if (!inputFile)
+				break;
 			result += nextLine;
 			result += "\n";
 		}

@@ -1,5 +1,6 @@
 #include"pch.h"
 #include"GLFWImplementation.h"
+#include <Utilities.h>
 
 
 namespace egg
@@ -14,7 +15,15 @@ namespace egg
 
 	void GLFWImplementation::Create(const std::string& name, int width, int height)
 	{
-		mWindow = glfwCreateWindow(800, 600, "Game_IC", NULL, NULL);
+		mWindow = glfwCreateWindow(width, height, "Game_IC", NULL, NULL);
+
+		if (mWindow == NULL)
+		{
+			EGG_ERROR("Failed to create GLFW window");
+			glfwTerminate();
+			return;
+		}
+		glfwMakeContextCurrent(mWindow);
 	}
 
 

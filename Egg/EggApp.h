@@ -2,6 +2,10 @@
 
 #include "Utilities.h"
 #include"GameWindow.h"
+/*
+#include"Renderer.h"
+#include"Picture.h"
+*/
 
 namespace egg
 {
@@ -15,6 +19,8 @@ namespace egg
 		void Run();
 		virtual void OnUpdate();
 
+		void Draw(int x, int y, Picture& pic);
+
 		friend typename T;
 
 	private:
@@ -23,6 +29,8 @@ namespace egg
 		inline static EggApp* sInstance{ nullptr };
 
 		GameWindow mWindow;
+
+		Renderer mRenderer;
 
 		bool mShouldContinue{ true };
 
