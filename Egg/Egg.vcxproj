@@ -136,7 +136,13 @@
     <ClInclude Include="EggApp.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="GLFWCode\GLFWImplementation.h" />
+    <ClInclude Include="GLFWCode\OpenGLPicture.h" />
+    <ClInclude Include="GLFWCode\OpenGLRenderer.h" />
     <ClInclude Include="GLFWCode\OpenGLShader.h" />
+    <ClInclude Include="Picture.h" />
+    <ClInclude Include="PictureImplementation.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RendererImplementation.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="include\Egg.h" />
     <ClInclude Include="pch.h" />
@@ -147,11 +153,15 @@
   <ItemGroup>
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="GLFWCode\GLFWImplementation.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLPicture.cpp" />
+    <ClCompile Include="GLFWCode\OpenGLRenderer.cpp" />
     <ClCompile Include="GLFWCode\OpenGLShader.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Picture.cpp" />
     <ClCompile Include="placeholder.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>

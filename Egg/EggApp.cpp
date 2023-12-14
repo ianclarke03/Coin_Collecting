@@ -32,6 +32,7 @@ namespace egg
 		sInstance->Run();
 	}
 
+	
 	template<typename T>
 	void EggApp<T>::Run()
 	{
@@ -43,7 +44,7 @@ namespace egg
 			EGG_ERROR("Failed to initialize GLAD");
 			return;
 		}
-
+		/*
 		float vertices[] = {
 			100.f, 100.f, 0.0f, 0.0f,
 			 300.f, 100.f, 1.0f, 0.0f,
@@ -76,7 +77,7 @@ namespace egg
 
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2*sizeof(float))); //dk if this coreect
 		glEnableVertexAttribArray(1);
-
+		*/
 
 		////////////// SHADERS ///////////////
 		
@@ -161,13 +162,12 @@ namespace egg
 	{
 	}
 
-	/*
+
 	template<typename T>
 	void EggApp<T>::Draw(int x, int y, Picture& pic)
 	{
 		mRenderer.Draw(100, 200, pic);
 	}
-	*/
 
 
 
