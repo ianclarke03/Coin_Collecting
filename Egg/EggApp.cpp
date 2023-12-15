@@ -2,12 +2,14 @@
 #include "EggApp.h"
 #include "Utilities.h"
 
+//might not need these 3 anymore
 #include"../glad/include/glad/glad.h"
 #include"../glfw/include/GLFW/glfw3.h"
 #include"../stbi/stb_image.h"
 
-
 #include"Shader.h"
+#include"Picture.h"
+#include"Renderer.h"
 
 namespace egg
 {

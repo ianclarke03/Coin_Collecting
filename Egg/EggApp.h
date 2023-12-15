@@ -2,10 +2,12 @@
 
 #include "Utilities.h"
 #include"GameWindow.h"
-/*
 #include"Renderer.h"
 #include"Picture.h"
-*/
+
+
+#include"Shader.h"
+
 
 namespace egg
 {

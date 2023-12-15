@@ -14,6 +14,7 @@ namespace egg
 		mImplementation = std::unique_ptr<ShaderImplementation>{ new OpenGLShader(vertexSFile, fragmentSFile) };
 #endif
 	}
+
 	void Shader::Bind()
 	{
 		mImplementation->Bind();
