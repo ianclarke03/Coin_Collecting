@@ -96,7 +96,6 @@ namespace egg
 			EGG_ERROR("ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog);
 		}
 
-
 		mShaderProgram = glCreateProgram();
 		glAttachShader(mShaderProgram, vertexShader);
 		glAttachShader(mShaderProgram, fragmentShader);

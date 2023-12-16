@@ -21,12 +21,12 @@ void egg::Picture::Bind()
 	mImplementation->Bind();
 }
 
-int egg::Picture::GetWidth()
+int egg::Picture::GetWidth() const
 {
 	return mImplementation->GetWidth();
 }
 
-int egg::Picture::GetHeight()
+int egg::Picture::GetHeight() const
 {
 	return mImplementation->GetHeight();
 }

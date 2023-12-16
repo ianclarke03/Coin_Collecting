@@ -16,8 +16,8 @@ namespace egg
 
 		// implmented in OpenGlPicture.cpp
 		void Bind() override;
-		virtual int GetWidth() override;
-		virtual int GetHeight() override;
+		virtual int GetWidth() const override;
+		virtual int GetHeight() const override;
 
 	private:
 		int width;

@@ -13,8 +13,8 @@ namespace egg
 
 		Picture(const std::string& pictureFile);
 		void Bind();
-		int GetWidth();
-		int GetHeight();
+		int GetWidth() const;
+		int GetHeight() const;
 
 	private:
 		std::unique_ptr<PictureImplementation> mImplementation;

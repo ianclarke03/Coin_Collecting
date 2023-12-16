@@ -86,11 +86,11 @@ namespace egg
 
 
 
-	int OpenGLPicture::GetWidth()
+	int OpenGLPicture::GetWidth() const
 	{
 		return height;
 	}
-	int OpenGLPicture::GetHeight()
+	int OpenGLPicture::GetHeight() const
 	{
 		return width;
 	}

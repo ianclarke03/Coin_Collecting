@@ -134,11 +134,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="EggApp.h" />
+    <ClInclude Include="Events.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="GLFWCode\GLFWImplementation.h" />
     <ClInclude Include="GLFWCode\OpenGLPicture.h" />
     <ClInclude Include="GLFWCode\OpenGLRenderer.h" />
     <ClInclude Include="GLFWCode\OpenGLShader.h" />
+    <ClInclude Include="Keys.h" />
     <ClInclude Include="Picture.h" />
     <ClInclude Include="PictureImplementation.h" />
     <ClInclude Include="Renderer.h" />
@@ -147,10 +149,12 @@
     <ClInclude Include="include\Egg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShaderImplementation.h" />
+    <ClInclude Include="Unit.h" />
     <ClInclude Include="Utilities.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="GLFWCode\GLFWImplementation.cpp" />
     <ClCompile Include="GLFWCode\OpenGLPicture.cpp" />
@@ -163,6 +167,7 @@
     <ClCompile Include="placeholder.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\glad\glad.vcxproj">
