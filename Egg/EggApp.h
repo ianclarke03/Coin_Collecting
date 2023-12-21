@@ -34,6 +34,9 @@ namespace egg
 
 		friend typename T;
 
+		int GetWidth();
+		int GetHeight();
+
 	private:
 		EggApp();
 

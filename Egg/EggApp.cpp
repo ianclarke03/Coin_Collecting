@@ -101,4 +101,14 @@ namespace egg
 		mShouldContinue = false;
 	}
 
+	template<typename T>
+	int EggApp<T>::GetWidth() {
+		return mWindow.GetWidth();
+	}
+
+	template<typename T>
+	int EggApp<T>::GetHeight() {
+		return mWindow.GetHeight();
+	}
+
 }
