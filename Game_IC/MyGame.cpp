@@ -14,28 +14,30 @@ MyGame::MyGame()//implement in MyGame.cpp
 	mState = State::Stop;
 	mLastCoinTime = std::chrono::high_resolution_clock::now();
 
-	
-	/*
-	// Initialize the positions for each coin
-	// Adjust these coordinates based on your desired starting positions
-	int coinX1 = 100;
-	int coinY1 = 200;
 
-	int coinX2 = 300;
-	int coinY2 = 400;
+	// Load digit images
+	for (int i = 0; i <= 9; ++i)
+	{
+		std::string digitImagePath = "../Assets/Pictures/digit_folder" + std::to_string(i) + ".png";
+		mDigitImages.emplace_back(digitImagePath);
+	}
 
-	// Create shared pointers for the coin pictures
-	std::shared_ptr<egg::Picture> coinPicture = std::make_shared<egg::Picture>("../Assets/Pictures/coin.png");
-
-	// Create instances of the Coin class with specified positions
-	Coin coin1(coinX1, coinY1, coinPicture);
-	Coin coin2(coinX2, coinY2, coinPicture);
-
-	// Add the coins to the vector
-	mCoins.push_back(coin1);
-	mCoins.push_back(coin2);
-	*/
 	GenerateCoin();
+
+}
+
+
+
+void MyGame::DrawDigitCounter(int x, int y, int score) {
+	std::string sscore = std::to_string(score);
+	// each digit
+	for (char digit : sscore) {
+
+		int digitValue = digit - '0';
+		Draw(x, y, mDigitImages[digitValue]);
+
+		x += mDigitImages[digitValue].GetWidth() - 15; //change
+	}
 }
 
 
@@ -172,6 +174,7 @@ void MyGame::CheckCollisions()
 	for (auto it = mCoins.begin(); it != mCoins.end();) {
 		if (CollideWithCoinAt(it->GetXCoinCoord(), it->GetYCoinCoord())) {
 			it = mCoins.erase(it);  // Erase and get the iterator to the next element
+			mScore++; //increment score
 		}
 		else {
 			++it;  // Move to the next element
@@ -188,7 +191,6 @@ void MyGame::CheckCollisions()
 
 void MyGame::GenerateCoin()
 {
-	// Seed the random number generator (call this once in your program)
 	static bool srandInitialized = false;
 	if (!srandInitialized)
 	{
@@ -263,6 +265,7 @@ bool MyGame::CollideWithCoinAt(int x, int y) const
 			robotBottom > coinTop && robotTop < coinBottom)
 		{
 			return true; // Collision detected
+			
 		}
 	}
 
@@ -296,6 +299,7 @@ void MyGame::OnUpdate()
 
 	mFrameCounter++;
 	//std::this_thread::sleep_for(std::chrono::milliseconds(50)); // Adjust the delay as needed
+	DrawDigitCounter(800, 800, mScore);
 }
 
 

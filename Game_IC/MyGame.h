@@ -50,6 +50,8 @@ public:
 	virtual void OnUpdate() override;
 
 
+	void DrawDigitCounter(int x, int y, int score); //draws scoreboard
+
 	
 
 private:
@@ -68,9 +70,12 @@ private:
 
 	int mFrameCounter = 0;
 
-
+	//coords of robot
 	int mXPos{ 0 };
 	int mYPos{ 0 };
+
+	int mScore{ 0 }; //keeps track of score
+	std::vector<egg::Picture> mDigitImages; // PNG images of digits
 
 
 };
