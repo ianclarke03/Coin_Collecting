@@ -59,8 +59,8 @@ private:
 
 	enum class Direction { Up = 0, Left = 1, Down = 2, Right = 3 } mDirection;
 	enum class State { Stop, Move } mState;
-	float mSpeed = 5.0f;
-	std::chrono::high_resolution_clock::time_point mLastCoinTime;
+	float mSpeed = 15.0f;
+	//std::chrono::high_resolution_clock::time_point mLastCoinTime;
 
 	int mFrameCounter = 0;
 

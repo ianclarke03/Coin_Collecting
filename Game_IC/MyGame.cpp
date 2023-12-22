@@ -12,13 +12,13 @@ MyGame::MyGame()//implement in MyGame.cpp
 
 	mDirection = Direction::Right;
 	mState = State::Stop;
-	mLastCoinTime = std::chrono::high_resolution_clock::now();
+	//mLastCoinTime = std::chrono::high_resolution_clock::now();
 
 
 	// Load digit images
 	for (int i = 0; i <= 9; ++i)
 	{
-		std::string digitImagePath = "../Assets/Pictures/digit_folder" + std::to_string(i) + ".png";
+		std::string digitImagePath = "../Assets/Pictures/digits_folder/" + std::to_string(i) + ".png";
 		mDigitImages.emplace_back(digitImagePath);
 	}
 
@@ -36,7 +36,7 @@ void MyGame::DrawDigitCounter(int x, int y, int score) {
 		int digitValue = digit - '0';
 		Draw(x, y, mDigitImages[digitValue]);
 
-		x += mDigitImages[digitValue].GetWidth() - 15; //change
+		x += mDigitImages[digitValue].GetWidth() - 15;
 	}
 }
 
@@ -118,23 +118,6 @@ void MyGame::UpdateRobotPosition()
 void MyGame::CheckCollisions()
 {
 
-	//auto it = mCoins.begin();
-	/*
-	while (it != mCoins.end()) {
-
-		Coin& coin = *it;
-
-		if (CollideWithCoinAt(coin.GetXCoinCoord(), coin.GetYCoinCoord())) {
-			std::cout << "Collision detected with coin at (" << it->GetXCoinCoord() << ", " << it->GetYCoinCoord() << ")" << std::endl;
-			
-			it = mCoins.erase(it);
-			// Handle collision logic (e.g., increase score)
-		}
-		else
-			++it;
-	}
-	*/
-
 	for (auto it = mCoins.begin(); it != mCoins.end();) {
 		if (CollideWithCoinAt(it->GetXCoinCoord(), it->GetYCoinCoord())) {
 			it = mCoins.erase(it);  // Erase and get the iterator to the next element
@@ -161,28 +144,18 @@ void MyGame::GenerateCoin()
 		std::srand(static_cast<unsigned>(std::time(nullptr)));
 		srandInitialized = true;
 	}
-	/*
-	// Get the current time
-	auto currentTime = std::chrono::high_resolution_clock::now();
-
-	// Calculate the elapsed time since the last coin generation
-	auto elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(currentTime - mLastCoinTime).count();
-	*/
-	//mFrameCounter = 60;
-	// Check if enough time has passed (2 seconds)
 	if (mFrameCounter == 60)
 	{
 		// Generate random X and Y coordinates within the window
 		int coinX = std::rand() % 1000; // Random X in the range [0, 999]
 		int coinY = std::rand() % 800;  // Random Y in the range [0, 799]
 
-		// Load the coin picture (assuming mCoinPicture is a shared pointer)
+		// Load coin picture
 		std::shared_ptr<egg::Picture> coinPicture = std::make_shared<egg::Picture>("../Assets/Pictures/coin.png");
 
-		// Create a new coin with the determined coordinates and shared pointer to the picture
+		// Create a new coin
 		mCoins.emplace_back(coinX, coinY, coinPicture);
 
-		// Update the last coin generation time
 		//mLastCoinTime = currentTime;
 		mFrameCounter = 0;
 	}
@@ -243,7 +216,7 @@ void MyGame::OnUpdate()
 	CheckCollisions();
 
 
-	DrawDigitCounter(300, 300, mScore);
+	DrawDigitCounter(50, 700, mScore);
 
 	mFrameCounter++;
 	//std::this_thread::sleep_for(std::chrono::milliseconds(50)); // Adjust the delay as needed
