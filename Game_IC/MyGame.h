@@ -11,15 +11,15 @@
 class Coin
 {
 public:
-	Coin(int x, int y, std::shared_ptr<egg::Picture> picture) : mX(x), mY(y), mPicture(picture) {}
+	Coin(int x, int y, std::shared_ptr<egg::Picture> picture) : mXCoinCoord(x), mYCoinCoord(y), mPicture(picture) {}
 
-	int GetX() const { return mX; }
-	int GetY() const { return mY; }
+	int GetXCoinCoord() const { return mXCoinCoord; }
+	int GetYCoinCoord() const { return mYCoinCoord; }
 	std::shared_ptr<egg::Picture> GetPicture() const { return mPicture; }
 
 private:
-	int mX;
-	int mY;
+	int mXCoinCoord;
+	int mYCoinCoord;
 	std::shared_ptr<egg::Picture> mPicture;
 };
 
@@ -44,43 +44,13 @@ public:
 
 	void GenerateCoin();
 	void CheckCollisions();
-	bool CollideWithCoinAt(int xPum, int yPum) const;
+	bool CollideWithCoinAt(int x, int y) const;
 
 
-
-	virtual void OnUpdate() override
-	{
-		
-		Draw(0, 0, mBackground);
-		GenerateCoin();
-		for (auto& coords : mCoins)
-			Draw(coords.GetX(), coords.GetY(), mCoin); //either mCoin or mCoins idk yet
-		//Draw(0, 0, mCoin);
-		//Draw(mUnit);
-		UpdateRobotPosition();
-
-		// Draw the robot based on the current direction
-		Draw(mXPos, mYPos, mRobot[(int)mDirection]);
-		//CheckCollisions();
-
-	}
+	virtual void OnUpdate() override;
 
 
-	/*
-	voidMyGame::OnUpdate(){ //draws the game
-	draw(0,0,mbackground)
-
-	plantPumpkin();
-
-	for(auto&coords : mpumpkins)
-		Draw(Coords.first, coords.secomd, mPumpkin);
-
-	UpdateTractorPosition();
-	draw(mXPos, mTPos, mTractor[(int)mDirection]);
-	checkcollsions();
-	mCounter,drawcounter(mscore);
-	mFrameCounter++;
-}*/
+	
 
 private:
 	egg::Picture mCoin{ "../Assets/Pictures/coin.png" };
@@ -95,6 +65,8 @@ private:
 	enum class State { Stop, Move } mState;
 	float mSpeed = 5.0f;
 	std::chrono::high_resolution_clock::time_point mLastCoinTime;
+
+	int mFrameCounter = 0;
 
 
 	int mXPos{ 0 };
