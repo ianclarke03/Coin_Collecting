@@ -1,23 +1,22 @@
-My game is essentially a coin collecting game. You play as a robot collecting 
-coins that randomly generate on the screen and attempt to get the highest score
- possible. It is possible to grab more than one coin at once.
+My game is essentially a coin-collecting game. You play as a robot collecting 
+coins that are randomly generated on the screen and attempt to get the highest 
+score possible. It is possible to grab more than one coin at once.
 
 Starting from where we left off in the recordings, I added two new files to my 
 Game_IC folder, MyGame.h and MyGame.cpp.
 
-To implement the coins, I added a Coin class in MyGame.h and use a GenerateCoin()
- function in my constructor along with collision functions to detect and record 
+To implement the coins, I added a Coin class in MyGame.h and used a GenerateCoin() 
+function in my constructor along with collision functions to detect and record 
 collisions in MyGame.cpp. Because of the random nature of these functions, it is 
 possible to pick up multiple coins at once by only touching one.
 
 The playable character is a robot and you can move it around with the arrow keys. 
-I have an OnKeyPress(), OnKeyRelease(), and UpdateRobotPosition() functions to 
+I have an OnKeyPress(), OnKeyRelease(), and UpdateRobotPosition() function to 
 control the movement of the robot.
 
-With very collision made, I increment a score count in the top left corner. The 
-numbers come from a folder in Assets/Pictures named digits_folder. I took my 
-current score as an int, converted it to a string, and for every character in 
-that string, converted it back to its corresponding number png image. The solution
- to this was similar to our in-class quiz where we had to convert a char to an int
- by subtracting the value of ‘0’.
-
+With every collision made, I increment a score count in the top left corner. 
+The numbers come from a folder in Assets/Pictures named digits_folder. I took 
+my current score as an int, converted it to a string, and for every character in 
+that string, converted it back to its corresponding number png image. The solution 
+to this was similar to our in-class quiz where we had to convert a char to an int by 
+subtracting the value of ‘0’.
