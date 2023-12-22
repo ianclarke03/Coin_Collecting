@@ -113,43 +113,7 @@ void MyGame::UpdateRobotPosition()
 /////////////////////// MOVING THE ROBOT //////////////////////////////
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-void MyGame::CheckCollisions()
-{
-	auto it = mCoins.begin();
-	while (it != mCoins.end()) {
-		if (CollideWithCoinAt(it->GetX(), it->GetY())) {
-			it = mCoins.erase(it);
-			//mScore++;
-		}
-		else
-			it++;
-	}
-}
-*/
+// colliding with coins
 
 void MyGame::CheckCollisions()
 {
@@ -225,21 +189,6 @@ void MyGame::GenerateCoin()
 }
 
 
-/*
-bool MyGame::CollideWithCoinAt(int x, int y) const
-{
-	for (const auto& coin : mCoins)
-	{
-		// Check if the provided position collides with the coin's position
-		if (x >= coin.GetX() && x <= coin.GetX() + coin.GetPicture()->GetWidth() &&
-			y >= coin.GetY() && y <= coin.GetY() + coin.GetPicture()->GetHeight())
-		{
-			return true; // Collision detected
-		}
-	}
-	return false; // No collision
-}
-*/
 
 bool MyGame::CollideWithCoinAt(int x, int y) const
 {
@@ -276,10 +225,6 @@ bool MyGame::CollideWithCoinAt(int x, int y) const
 
 
 
-
-
-
-
 void MyGame::OnUpdate()
 {
 	std::cout << "Robot: (" << mXPos << ", " << mYPos << ")" << std::endl;
@@ -297,9 +242,12 @@ void MyGame::OnUpdate()
 	Draw(mXPos, mYPos, mRobot[(int)mDirection]);
 	CheckCollisions();
 
+
+	DrawDigitCounter(300, 300, mScore);
+
 	mFrameCounter++;
 	//std::this_thread::sleep_for(std::chrono::milliseconds(50)); // Adjust the delay as needed
-	DrawDigitCounter(800, 800, mScore);
+	
 }
 
 
@@ -318,40 +266,3 @@ checkcollsions();
 mCounter,drawcounter(mscore);
 mFrameCounter++;
 }*/
-
-
-
-/*
-MyGame.cpp:
-
-voidMyGame::OnUpdate(){ //draws the game
-	draw(0,0,mbackground)
-
-	plantPumpkin();
-	for(auto&coords : mpumpkins)
-		Draw(Coords.first, coords.secomd, mPumpkin);
-
-	UpdateTractorPosition();
-	draw(mXPos, mTPos, mTractor[(int)mDirection]);
-	checkcollsions();
-	mCounter,drawcounter(mscore);
-	mFrameCounter++;
-}
-
-
-
-
-
-void MyGame::CheckCollisions()
-{
-auto it = mPumpkins.begin();
-while(it != mPumpkins.end()){
-	if(CollideWithPumpkinAt(it->first, it->second)){
-		it = mPumpkins.erase(it);
-		mScore++;
-		}
-	else
-		it++;
-	}
-}
-*/

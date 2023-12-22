@@ -36,12 +36,6 @@ public:
 	void UpdateRobotPosition();
 	void OnKeyRelease(const egg::KeyReleased& e);
 
-
-
-	//void CheckCollisions(); //defined
-	//void PlantPumpkin();
-	//bool CollideWithPumpkinAt(int xPum, int yPum) const;
-
 	void GenerateCoin();
 	void CheckCollisions();
 	bool CollideWithCoinAt(int x, int y) const;
@@ -79,35 +73,3 @@ private:
 
 
 };
-
-
-
-
-
-/*
-MyGame.h:
-
-class MyGame : public egg::EggApp<MyGame>
-{
-	public:
-		void OnKeyPress(const egg::KeyPressed& e)
-		void updateTractorPosition();
-		MyGame();
-		void PlantPumpkin();
-		void CheckCollisions();	
-		bool CollideWithPumpkinAt(int xPum, int yPum) const;
-
-	private:
-		std::vector<bv::Picture> mTractor; //character unit (vector of pictures)
-		enum class Direction(Up = 0, Left = 1, Down = 2, Right = 3) mDirection;
-		enum class State(Stop, Move) mState;
-
-		int mXPos{ 0 };
-		int mYPos{ 0 };
-
-		//maybe add more here like an unmovable object or an enemy
-		bv::Picture mBackground{“../Assets/Pictures/Background.png” };
-		bv::Picture mPumpkin{“../Assets/Pictures/Pumpkin.png” };  //replaces mUnit
-}
-
-*/
