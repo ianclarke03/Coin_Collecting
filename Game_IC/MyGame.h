@@ -27,6 +27,7 @@ private:
 
 
 
+
 class MyGame : public egg::EggApp<MyGame>
 {
 public:
@@ -46,14 +47,13 @@ public:
 
 	void DrawDigitCounter(int x, int y, int score); //draws scoreboard
 
+
 	
 
 private:
 	egg::Picture mCoin{ "../Assets/Pictures/coin.png" };
-	//std::vector<egg::Picture> mCoins;
 	std::vector<Coin> mCoins;
 	egg::Picture mBackground{ "../Assets/Pictures/bg5.png" };
-	//egg::Unit mUnit{ "../Assets/Pictures/Robot_right.png" , 200, 400 };
 	std::vector<egg::Picture> mRobot; //character unit (vector of pictures)
 
 
@@ -70,6 +70,9 @@ private:
 
 	int mScore{ 0 }; //keeps track of score
 	std::vector<egg::Picture> mDigitImages; // PNG images of digits
+
+
+
 
 
 };

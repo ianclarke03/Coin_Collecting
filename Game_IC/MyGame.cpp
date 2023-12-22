@@ -22,6 +22,7 @@ MyGame::MyGame()//implement in MyGame.cpp
 		mDigitImages.emplace_back(digitImagePath);
 	}
 
+
 	GenerateCoin();
 
 }
@@ -39,6 +40,10 @@ void MyGame::DrawDigitCounter(int x, int y, int score) {
 		x += mDigitImages[digitValue].GetWidth() - 15;
 	}
 }
+
+
+
+
 
 
 /////////////////////// MOVING THE ROBOT //////////////////////////////
@@ -89,7 +94,6 @@ void MyGame::OnKeyRelease(const egg::KeyReleased& e)
 }
 
 
-
 void MyGame::UpdateRobotPosition()
 {
 	if (mState != State::Move) {
@@ -109,6 +113,8 @@ void MyGame::UpdateRobotPosition()
 		mYPos = std::min(static_cast<float>(GetHeight()) - mRobot[(int)Direction::Up].GetHeight(), mYPos + mSpeed);
 	}
 }
+
+
 
 /////////////////////// MOVING THE ROBOT //////////////////////////////
 
@@ -222,20 +228,3 @@ void MyGame::OnUpdate()
 	//std::this_thread::sleep_for(std::chrono::milliseconds(50)); // Adjust the delay as needed
 	
 }
-
-
-/*
-voidMyGame::OnUpdate(){ //draws the game
-draw(0,0,mbackground)
-
-plantPumpkin();
-
-for(auto&coords : mpumpkins)
-	Draw(Coords.first, coords.secomd, mPumpkin);
-
-UpdateTractorPosition();
-draw(mXPos, mTPos, mTractor[(int)mDirection]);
-checkcollsions();
-mCounter,drawcounter(mscore);
-mFrameCounter++;
-}*/
