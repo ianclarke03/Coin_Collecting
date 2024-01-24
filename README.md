@@ -1,4 +1,5 @@
 Coin Collector Game
+
 Welcome to my coin-collecting game! In this game, you control a robot that aims to collect as many coins as possible to achieve the highest score. Coins are randomly generated on the screen, and you have the ability to grab multiple coins simultaneously.
 
 Game Mechanics
